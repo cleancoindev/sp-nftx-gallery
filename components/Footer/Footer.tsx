@@ -71,7 +71,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="md:text-right text-center pt-1 md:pt-0 text-sm">
+        <div className="md:text-right text-center pt-4 md:pt-0 text-sm">
           {useMessage('footer.text.data', {
             opensea: (
               <Link href="https://opensea.io/">
