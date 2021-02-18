@@ -72,6 +72,7 @@ const FundGroup = ({
                           {item.fundToken.name}
                         </span>
                         <Pill
+                          highlight={item.isD2Vault}
                           text={useMessage(
                             item.isD2Vault ? 'pill.combined' : 'pill.single'
                           )}
