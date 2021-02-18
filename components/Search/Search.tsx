@@ -11,7 +11,7 @@ const Search = ({
   handleChange,
   placeholder = 'Search',
 }: SearchProps) => (
-  <div className="w-full sm:w-auto lg:w-96">
+  <div className="w-full md:w-auto lg:w-96">
     <input
       type="text"
       value={value}

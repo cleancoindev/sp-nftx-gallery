@@ -84,9 +84,9 @@ const SingleFund = ({
           })}
         </title>
       </Head>
-      <div className="container mx-auto text-center px-4 text-gray-50 mt-16">
-        <div className="flex flex-col sm:flex-row mb-8">
-          <header className="flex-1 sm:pr-8">
+      <div className="container mx-auto px-4 text-gray-50 mt-16">
+        <div className="flex flex-col md:flex-row mb-8">
+          <header className="flex-1 md:pr-8">
             <div className="mb-4">
               <Breadcrumb />
             </div>
@@ -95,6 +95,9 @@ const SingleFund = ({
                 {fundToken.name}
               </h1>
               <FundStatus amm={true} ver={true} fin={isFinalized} />
+            </div>
+            <div className="mb-6 max-w-prose">
+              <p>{useMessage(`fund.single.${fundKey}.text`)}</p>
             </div>
             <dl className="flex items-center">
               <div className="mr-4">

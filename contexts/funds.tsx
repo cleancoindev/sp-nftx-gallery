@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createContext, ReactChild, useContext } from 'react';
 import fetchWithTimeout from '@/utils/fetchWithTimeout';
+import { fundSymbols } from '@/constants/allowlist';
 import { Fund } from '@/types/fund';
 
 const FundsContext = createContext<Fund[]>([]);
@@ -30,7 +31,9 @@ export const FundsProvider = ({ children }: { children: ReactChild }) => {
   useEffect(() => {
     (async () => {
       const allFunds = await getFunds();
-      const filteredFunds = allFunds.filter((f) => f.isFinalized);
+      const filteredFunds = allFunds.filter(
+        (f) => f.isFinalized && fundSymbols.includes(f.fundToken.symbol)
+      );
       setFunds(filteredFunds);
     })();
   }, []);

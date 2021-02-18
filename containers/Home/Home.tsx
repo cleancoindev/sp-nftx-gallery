@@ -67,7 +67,7 @@ const HomeContainer = ({ funds }: { funds: Fund[] }) => {
                 if (fund) {
                   return (
                     <Link href={`/collections/${cat.href}`} key={cat.href}>
-                      <a className="w-full sm:w-1/2 md:flex-1 md:p-2 transition-transform duration-300 transform hover:scale-105">
+                      <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 md:p-2 transition-transform duration-300 transform hover:scale-105">
                         <div className="p-2 md:p-0">
                           <Poster
                             title={useMessage(`funds.${cat.namespace}.title`)}
@@ -87,7 +87,7 @@ const HomeContainer = ({ funds }: { funds: Fund[] }) => {
               return null;
             })}
             <Link href="/funds/">
-              <a className="hidden lg:block lg:flex-1 p-2">
+              <a className="hidden md:block md:w-1/3 lg:w-1/4 p-2">
                 <div className="flex h-full items-center justify-center rounded-md bg-gradient-to-t from-gray-800 to-gray-700 text-white">
                   {useMessage('home.collections.poster.all')}
                 </div>

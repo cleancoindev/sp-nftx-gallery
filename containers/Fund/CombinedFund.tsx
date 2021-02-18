@@ -72,7 +72,7 @@ const CombinedFund = ({ fundKey, ...fund }: FundProps) => {
           <h2 className="text-3xl font-bold text-gray-50 mt-6 uppercase">
             {useMessage(`fund.combined.${fundKey}.title`)}
           </h2>
-          <p className="mt-6 text-gray-400">
+          <p className="mt-6 text-gray-300 max-w-prose">
             {useMessage(`fund.combined.${fundKey}.text`)}
           </p>
           <div className="mt-6 mb-6">

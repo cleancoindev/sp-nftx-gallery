@@ -11,13 +11,18 @@ export interface PosterProps {
 
 const Poster = ({ background, image, title, text, colorway }: PosterProps) => {
   const color = colorway === Colorway.DARK ? 'text-gray-900' : 'text-gray-50';
-  const aspect = (27 / 21) * 100;
+  const gradient =
+    colorway === Colorway.LIGHT
+      ? 'rgba(0,0,0,0.3), rgba(0,0,0,0))'
+      : 'rgba(255,255,255,.3), rgba(255,255,255,0))';
+  const aspect = (1.1 / 1) * 100;
+
   return (
     <div
       className={`${color} rounded-md h-0 relative`}
       style={{
         background,
-        backgroundImage: `url(${image})`,
+        backgroundImage: `linear-gradient(140deg, ${gradient}, url(${image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'left bottom',
         backgroundRepeat: 'no-repeat',
