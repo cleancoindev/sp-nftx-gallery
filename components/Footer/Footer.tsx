@@ -23,7 +23,7 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div className="mt-4 flex content-center justify-center h-full text-white text-bold">
+          <div className="mt-4 flex flex-wrap content-center justify-center h-full text-white text-bold">
             <Link href="https://twitter.com/NFTX_">
               <a
                 target="_blank"
@@ -58,6 +58,15 @@ const Footer = () => {
                 className="hover:underline ml-4"
               >
                 {useMessage('footer.link.discord')}
+              </a>
+            </Link>
+            <Link href="https://forum.nftx.org/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline ml-4"
+              >
+                {useMessage('footer.link.forum')}
               </a>
             </Link>
             <Link href="https://client.aragon.org/#/nftx/">
