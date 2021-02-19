@@ -1,4 +1,6 @@
 {
+  "header.beta.text": "NFTX Gallery: v{version}",
+  "header.beta.feedback": "Give feedback",
   "breadcrumb.home": "Home",
   "breadcrumb.funds": "All Funds",
   "breadcrumb.mask": "Hashmasks",

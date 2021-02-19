@@ -90,6 +90,7 @@ const AssetGroupLoader = ({
     .join('&token_ids=');
   const assetUrl = `https://api.opensea.io/api/v1/assets?asset_contract_address=${fund.asset.address}&token_ids=${tokenIds}&limit=${max}`;
 
+  // @TODO move to a useAssets hook
   const [{ data, loading, error }] = useAxios<{ assets: Asset[] }>({
     url: assetUrl,
     headers: {

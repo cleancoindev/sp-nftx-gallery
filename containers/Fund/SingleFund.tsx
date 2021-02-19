@@ -39,9 +39,11 @@ const SingleFund = ({
     }
   }, [asset.address, offset, limit]);
 
+  // @TODO move to a useAssets hook
   const [{ data, loading, error }, refetch] = useAxios<{ assets: Asset[] }>({
     url,
     headers: {
+      // @TODO have this stored in one common axios headers object for all opensea requests
       'X-API-KEY': process.env.NEXT_PUBLIC_OPENSEA_API_KEY,
     },
   });

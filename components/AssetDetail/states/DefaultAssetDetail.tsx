@@ -82,7 +82,8 @@ const DefaultAssetDetail = ({
                 className="w-full xl:w-1/2 text-center flex items-center"
                 size={Size.LARGE}
                 kind={Kind.SECONDARY}
-                href={openseaUrl}
+                // @TODO make this a util
+                href={`${openseaUrl}?ref=0x40d73df4f99bae688ce3c23a01022224fe16c7b2`}
                 target="_blank"
                 icon={Icons.OPENSEA}
               >

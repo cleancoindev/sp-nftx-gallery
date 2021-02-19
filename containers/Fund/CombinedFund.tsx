@@ -20,6 +20,7 @@ const CombinedFund = ({ fundKey, ...fund }: FundProps) => {
   const funds = useFundsContext();
   const [supportingFunds, setSupportingFunds] = useState([]);
   const [price, setPrice] = useState(null);
+  // @TODO move to a usePrice (or useCovalent) hook
   const [{ data }] = useAxios({
     url: `https://api.covalenthq.com/v1/pricing/historical_by_address/1/usd/${fund.fundToken.address}/`,
   });

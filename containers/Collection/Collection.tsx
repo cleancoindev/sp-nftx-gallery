@@ -28,6 +28,7 @@ const CollectionContainer = ({
 
   const assetUrl = `https://api.opensea.io/api/v1/asset_contract/${collection.contract}`;
 
+  // @TODO move to a useCollection hook
   const [{ data }] = useAxios<Asset>({
     url: assetUrl,
     headers: {

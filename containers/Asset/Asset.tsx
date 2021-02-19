@@ -1,6 +1,6 @@
 import useAxios from 'axios-hooks';
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Breadcrumb from '@/components/Breadcrumbs';
 import AssetDetail, { AssetDetailStatus } from '@/components/AssetDetail';
 import AssetGroup from '@/components/AssetGroup';
@@ -18,6 +18,7 @@ const AssetContainer = React.memo(
   ({ fund, assetKey, fundKey }: AssetDetailProps) => {
     const assetUrl = `https://api.opensea.io/api/v1/asset/${fund.asset.address}/${assetKey}`;
 
+    // @TODO move to a useAsset hook
     const [{ data, loading, error }, refetch] = useAxios<Asset>({
       url: assetUrl,
       headers: {
@@ -25,13 +26,17 @@ const AssetContainer = React.memo(
       },
     });
 
+    const retryRef = useRef(0);
+
     useEffect(() => {
-      let retryCount = 0;
-      if (error && retryCount <= 2) {
-        setTimeout(() => {
-          retryCount++;
+      if (error == null) {
+        retryRef.current = 0;
+      } else if (retryRef.current <= 2) {
+        const h = setTimeout(() => {
+          retryRef.current++;
           refetch();
         }, 3000);
+        return () => clearTimeout(h);
       }
     }, [error]);
 

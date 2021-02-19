@@ -8,4 +8,7 @@ module.exports = {
   // pages without appending `.html` as long
   // as we have a trailing slash e.g. /vault/punk-basic/
   trailingSlash: true,
+  env: {
+    appVersion: process.env.npm_package_version,
+  },
 };
