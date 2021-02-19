@@ -26,24 +26,8 @@ const HomeContainer = ({ funds }: { funds: Fund[] }) => {
         </h1>
         <h2 className="text-sm font-bold text-center text-gray-50 leading-loose mb-3">
           {useMessage('home.subtitle', {
-            tvl: (
-              <FormattedNumber
-                value={10000000}
-                style="currency"
-                currency="USD"
-                maximumFractionDigits={0}
-                minimumFractionDigits={0}
-              />
-            ),
-            volume: (
-              <FormattedNumber
-                value={50000}
-                style="currency"
-                currency="USD"
-                maximumFractionDigits={0}
-                minimumFractionDigits={0}
-              />
-            ),
+            tvl: '🦧',
+            volume: '🦧',
           })}
         </h2>
         <p className="text-md object-center text-center text-white text-opacity-50 leading-relaxed max-w-xl mx-auto">

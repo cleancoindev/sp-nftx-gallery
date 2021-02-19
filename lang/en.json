@@ -12,7 +12,7 @@
   "home.cta.app": "Go to app",
   "home.cta.feelingLucky": "Go to random fund",
   "home.title": "NFTX Vaults",
-  "home.subtitle": "{tvl} Total Value Locked (TVL) in NFTX Vault · {volume} minted & redeemed in last 24h",
+  "home.subtitle": "Coming soon: Total Value Locked (TVL) in NFTX Vault · Total minted & redeemed in last 24h",
   "home.text": "This is a visual overview of all available NFT index funds and their underlying collateral. Invest in any of the funds with the click of a button.",
   "home.collections.title": "Popular collections",
   "home.collections.poster.text": "{count} {count, plural, one {fund} other {funds}}",
