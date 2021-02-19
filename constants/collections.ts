@@ -3,7 +3,7 @@ import { Colorway } from '@/components/Poster';
 // Popular collections - hard coded for now
 export default [
   {
-    items: ['hashmasks'],
+    items: ['mask'],
     href: 'hashmasks',
     image: '/images/posters/hashmasks.jpg',
     colorway: Colorway.LIGHT,
@@ -11,12 +11,27 @@ export default [
     contract: '0xc2c747e0f7004f9e8817db2ca4997657a7746928',
   },
   {
-    items: ['wrapped-cryptopunks', 'punk-core'],
+    items: [
+      'punk',
+      'punk-basic',
+      'punk-attr-4',
+      'punk-attr-5',
+      'punk-female',
+      'punk-zombie',
+    ],
     href: 'cryptopunks',
     image: '/images/posters/wrapped-cryptopunks.png',
     colorway: Colorway.LIGHT,
     namespace: 'cryptopunks',
     contract: '0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb',
+  },
+  {
+    items: ['babes-basic'],
+    href: 'bullrun-babes',
+    image: '/images/posters/bullrun-babes.png',
+    colorway: Colorway.LIGHT,
+    namespace: 'bullrun-babes',
+    contract: '0x4Ad4455aD5eF891695C221e8E683EfA65fabEDE0',
   },
   // {
   //   items: ['axie'],

@@ -15,10 +15,10 @@ import {
   VaultCardStatus,
   VaultCardType,
 } from '@/components/VaultCard/constants';
-import useMessage from '@/hooks/message';
+import useMessage from '@/hooks/useMessage';
 import type { FundProps } from './types';
 import { Asset } from '@/types/asset';
-import usePrice from '@/hooks/price';
+import usePrice from '@/hooks/usePrice';
 import { FormattedMessage } from 'react-intl';
 
 const SingleFund = ({
